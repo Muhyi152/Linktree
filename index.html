@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Link Bio Premium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BACKGROUND MATRIX -->
+    <div class="jp-matrix" id="matrix"></div>
+
+    <!-- CARD -->
+    <div class="container">
+        <img src="vector.jpeg" class="profile-img" alt="Profile">
+
+        <h1>Barber Shop</h1>
+        <p class="bio">Official Store • Fast Response • Trusted</p>
+
+        <a href="#" class="link-btn whatsapp">
+            WhatsApp
+            <img src="https://simpleicons.org/icons/whatsapp.svg" class="icon">
+        </a>
+
+        <a href="#" class="link-btn instagram">
+            Instagram
+            <img src="https://simpleicons.org/icons/instagram.svg" class="icon">
+        </a>
+
+        <a href="#" class="link-btn shopee">
+            Shopee
+            <img src="https://simpleicons.org/icons/shopee.svg" class="icon">
+        </a>
+
+        <a href="#" class="link-btn tiktok">
+            TikTok
+            <img src="https://simpleicons.org/icons/tiktok.svg" class="icon">
+        </a>
+
+        <footer>© 2025 Barber Shop Sidoarjo</footer>
+    </div>
+
+    <!-- MATRIX SCRIPT -->
+    <script>
+        const matrix = document.getElementById("matrix");
+        const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
+
+        const cols = Math.floor(window.innerWidth / 32);
+        const rows = Math.floor(window.innerHeight / 32);
+        const total = cols * rows;
+
+        for (let i = 0; i < total; i++) {
+            const span = document.createElement("span");
+            span.textContent = chars[Math.floor(Math.random() * chars.length)];
+            matrix.appendChild(span);
+        }
+    </script>
+
+</body>
+</html>
